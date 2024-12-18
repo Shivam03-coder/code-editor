@@ -2,6 +2,7 @@
 
 import StoreProvider from "@/store";
 import { Toaster } from "@/components/ui/toaster";
+import { ConvexClientProvider } from "./convex-client-provider";
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -16,8 +17,10 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
 const AppProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <StoreProvider>
-      <Toaster />
-      <AppLayout>{children}</AppLayout>
+      <ConvexClientProvider>
+        <Toaster />
+        <AppLayout>{children}</AppLayout>
+      </ConvexClientProvider>
     </StoreProvider>
   );
 };

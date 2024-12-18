@@ -84,7 +84,7 @@
 
 @layer utilities {
   .page {
-    @apply lg:p-6 xl:p-4;
+    @apply lg:p-6 xl:p-4 min-h-screen w-full;
   }
 
   .padding {

@@ -19,10 +19,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        primary: "var(--color-primary, #1F2937)", // Add fallbacks
-        secondary: "var(--color-secondary, #4B5563)",
-        main: "var(--color-main, #9CA3AF)",
-        dark: "var(--color-dark, #111827)",
+        primary: "var(--color-primary)",
+        secondary: "var(--color-secondary)",
+        main: "var(--color-main)",
+        dark: "var(--color-dark)",
         card: {
           DEFAULT: "hsl(var(--card, 210 11% 15%))",
           foreground: "hsl(var(--card-foreground, 210 11% 85%))",
@@ -56,7 +56,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-  ],
+  plugins: [require("tailwindcss-animate")],
 } satisfies Config;
