@@ -11,9 +11,6 @@ const Footer = () => {
           <p>
             © {new Date().getFullYear()} Shivam Anand. All rights reserved.
           </p>
-          <p>
-            Building scalable SaaS applications with innovation and passion.
-          </p>
         </div>
 
         <nav
