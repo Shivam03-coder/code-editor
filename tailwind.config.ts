@@ -13,11 +13,7 @@ export default {
         spaceGrotesk: ["var(--font-spaceGrotesk)", ...fontFamily.sans],
         manrope: ["var(--font-manrope)", ...fontFamily.sans],
       },
-      borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
+
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",

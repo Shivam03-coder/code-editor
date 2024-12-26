@@ -5,3 +5,9 @@ export interface MetaProps {
     author?: string;
     robots?: string;
   }
+
+  export interface Theme {
+    id: string;
+    label: string;
+    color: string;
+  }

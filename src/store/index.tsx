@@ -9,10 +9,10 @@ import {
 } from "react-redux";
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { useRef } from "react";
-import { accountState } from "./states";
+import themeStateSlice from "./states/dialog-state";
 
 const rootReducer = combineReducers({
-  account: accountState.reducer,
+  themes: themeStateSlice.reducer,
 });
 
 export const makeStore = () =>

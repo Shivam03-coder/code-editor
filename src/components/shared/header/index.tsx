@@ -12,6 +12,8 @@ import {
   Play,
 } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
+import ThemeDialog from "../dialogs/theme.dialog";
+import LanguageDialog from "../dialogs/language.dialog";
 
 const Header = async () => {
   const user = await currentUser();
@@ -26,7 +28,7 @@ const Header = async () => {
   });
   return (
     <header className="relative z-10">
-      <nav className="bg-header flex w-full justify-between rounded-2xl px-3 py-2">
+      <nav className="flex w-full justify-between rounded-2xl bg-header px-3 py-2">
         <div className="vcenter gap-4 text-secondary">
           <span className="rounded-xl border border-gray-600 bg-black p-2">
             <Code size={32} />
@@ -37,7 +39,7 @@ const Header = async () => {
             <p className=""> Ai composed code editior</p>
           </span>
 
-          <button className="vcenter ml-4 gap-3 rounded-xl border border-gray-500 bg-purple-500 px-4 py-3 font-poppins text-sm text-white hover:bg-purple-600 font-medium">
+          <button className="vcenter ml-4 gap-3 rounded-xl border border-gray-500 bg-purple-500 px-4 py-3 font-poppins text-sm font-medium text-white hover:bg-purple-600">
             <ArrowsUpFromLine size={19} className="text-primary" />
             Snippets
           </button>
@@ -46,25 +48,19 @@ const Header = async () => {
         {/* RIGHT */}
         <div className="vcenter gap-4 text-secondary">
           {/* Themes Button */}
-          <button className="vcenter gap-3 rounded-xl border border-gray-500 bg-blue-500 font-medium px-4 py-3 font-poppins text-sm text-white hover:bg-blue-600">
-            <Settings size={19} className="text-white" />
-            Themes
-          </button>
+          <ThemeDialog />
 
           {/* Language Button */}
-          <button className="vcenter gap-3 rounded-xl border border-gray-500 bg-green-500 font-medium px-4 py-3 font-poppins text-sm text-white hover:bg-green-600">
-            <Globe size={19} className="text-white" />
-            Language
-          </button>
+          <LanguageDialog />
 
           {/* Subscription Button */}
-          <button className="vcenter gap-3 rounded-xl border border-gray-500 bg-yellow-500 font-medium px-4 py-3 font-poppins text-sm text-black hover:bg-yellow-600">
+          <button className="vcenter gap-3 rounded-xl border border-gray-500 bg-yellow-500 px-4 py-3 font-poppins text-sm font-medium text-black hover:bg-yellow-600">
             <DollarSign size={19} className="text-black" />
             Subscription
           </button>
 
           {/* Run Button */}
-          <button className="vcenter gap-3 rounded-xl border border-gray-500 bg-red-500 font-medium px-4 py-3 font-poppins text-sm text-white hover:bg-red-600">
+          <button className="vcenter gap-3 rounded-xl border border-gray-500 bg-red-500 px-4 py-3 font-poppins text-sm font-medium text-white hover:bg-red-600">
             <Play size={19} className="text-white" />
             Run
           </button>
