@@ -15,17 +15,14 @@ import { useEffect, useState } from "react";
 import { LANGUAGES } from "@/constants/themes";
 import { useLocalStorage } from "usehooks-ts";
 import Image from "next/image";
+import useMounted from "@/hooks/use-mounted";
 
 const LanguageDialog = () => {
   const { isLanguageDialogOpen } = useAppSelector((state) => state.themes);
   const dispatch = useDispatch();
-  const [Mounted, setMounted] = useState<boolean>(false);
+  const mounted = useMounted();
   const [Language, setLanguage] = useLocalStorage("lang", "");
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!Mounted) return null;
+  if (!mounted) return null;
 
   return (
     <Dialog

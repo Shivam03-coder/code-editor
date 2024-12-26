@@ -16,18 +16,15 @@ import { setIsThemeDialogOpen } from "@/store/states/dialog-state";
 import { Settings } from "lucide-react";
 import { useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
+import useMounted from "@/hooks/use-mounted";
 
 const ThemeDialog = () => {
   const { isThemeDialogOpen } = useAppSelector((state) => state.themes);
   const dispatch = useDispatch();
-  const [Mounted, setMounted] = useState<boolean>(false);
+  const mounted = useMounted();
   const [Themes, setThemes] = useLocalStorage("theme", "GitHub Dark");
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!Mounted) return null;
+  if (!mounted) return null;
 
   return (
     <Dialog

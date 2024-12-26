@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="absolute inset-x-0 bottom-0 h-full max-h-12 w-full text-secondary">
+    <footer className="absolute bg-primary inset-x-0 bottom-0 h-12 mt-5 w-full text-secondary">
       <div className="flex w-full items-center justify-between px-4">
         <AvatarSectionDeveloper />
         <div className="text-center text-secondary">
