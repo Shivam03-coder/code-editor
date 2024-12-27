@@ -447,3 +447,4 @@ export const LANGUAGES = [
   { id: 9, name: "Ruby", icon: "/ruby.png", shadow: "0 4px 10px rgba(112, 21, 22, 0.6)" },
   { id: 10, name: "Swift", icon: "/swift.png", shadow: "0 4px 10px rgba(240, 81, 56, 0.6)" },
 ];
+

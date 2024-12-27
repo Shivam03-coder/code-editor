@@ -10,9 +10,11 @@ import {
 import { setupListeners } from "@reduxjs/toolkit/query";
 import { useRef } from "react";
 import themeStateSlice from "./states/dialog-state";
+import codeEditorSlice from "./states/editior-state";
 
 const rootReducer = combineReducers({
   themes: themeStateSlice.reducer,
+  editor: codeEditorSlice.reducer,
 });
 
 export const makeStore = () =>
