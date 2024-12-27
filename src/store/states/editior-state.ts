@@ -1,23 +1,7 @@
 import { LANGUAGE_CONFIG } from "@/constants/themes";
 import { createSlice, PayloadAction, createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "@/store";
-
-interface ExecutionResult {
-  code: string;
-  output: string;
-  error: string | null;
-}
-
-interface CodeEditorState {
-  language: string;
-  theme: string;
-  fontSize?: number;
-  output: string;
-  isRunning: boolean;
-  error: string | null;
-  editor: any;
-  executionResult: ExecutionResult | null;
-}
+import { CodeEditorState } from "@/types/global";
 
 const getInitialState = (): CodeEditorState => {
   if (typeof window === "undefined") {

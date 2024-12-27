@@ -50,7 +50,7 @@ const InputPanel: React.FC = () => {
         <Editor
           height="100%"
           language={LANGUAGE_CONFIG[language]?.monacoLanguage || "javascript"}
-          theme={theme}
+          theme={"vs-dark"}
           options={{
             minimap: { enabled: false },
             fontSize: 16,
