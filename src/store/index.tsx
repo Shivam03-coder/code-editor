@@ -20,6 +20,13 @@ const rootReducer = combineReducers({
 export const makeStore = () =>
   configureStore({
     reducer: rootReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        serializableCheck: {
+          ignoredActions: ["editor/setEditor"], // Add your action type here
+          ignoredPaths: ["editor.editor"], // Ignore specific state paths
+        },
+      }),
   });
 
 export type AppStore = ReturnType<typeof makeStore>;

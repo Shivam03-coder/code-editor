@@ -7,7 +7,7 @@ const getInitialState = (): CodeEditorState => {
   if (typeof window === "undefined") {
     return {
       language: "javascript",
-      theme: "vs-dark",
+      theme: "monokai",
       fontSize: 16,
       output: "",
       isRunning: false,

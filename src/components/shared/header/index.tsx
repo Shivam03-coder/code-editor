@@ -12,7 +12,6 @@ import {
   Play,
 } from "lucide-react";
 import { UserButton } from "@clerk/nextjs";
-import ThemeDialog from "../dialogs/theme.dialog";
 import LanguageDialog from "../dialogs/language.dialog";
 
 const Header = async () => {
@@ -47,9 +46,6 @@ const Header = async () => {
 
         {/* RIGHT */}
         <div className="vcenter gap-4 text-secondary">
-          {/* Themes Button */}
-          <ThemeDialog />
-
           {/* Language Button */}
           <LanguageDialog />
 
