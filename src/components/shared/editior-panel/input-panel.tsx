@@ -111,7 +111,7 @@ const InputPanel: React.FC = () => {
     LANGUAGE_CONFIG[language]?.monacoLanguage || "javascript";
 
   return (
-    <div className="h-screen flex-1 overflow-hidden overflow-y-scroll rounded-xl pb-5 ring-1 ring-zinc-100">
+    <div className="max-h-[700px] flex-1 overflow-hidden overflow-y-scroll rounded-xl pb-5 ring-1 ring-zinc-100">
       <InputPanelHeader />
       {clerk.loaded && (
         <Editor
